@@ -1,0 +1,15 @@
+@import "tailwindcss" source("../");
+
+@theme inline {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f5f0;
+  color: #1d2927;
+}
+
+::selection {
+  background: #bce2d9;
+}

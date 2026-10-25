@@ -1,5 +1,12 @@
 node_modules/
 dist/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.agents/skills/impeccable/scripts/bin/
+.claude/skills/impeccable/scripts/bin/
+.impeccable/
 .cache/
 *.log
 __pycache__/

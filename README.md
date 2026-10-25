@@ -1,22 +1,50 @@
 # Arisuweb
 
-Dependensi untuk pengembangan scene 3D dan animasi web.
+Fondasi website company profile dengan Next.js App Router, TypeScript, Tailwind CSS v4, dan GSAP. Halaman awal menyertakan contoh animasi yang menghormati preferensi reduced motion. Identitas dan konten perusahaan belum diisi.
 
 ## Instalasi
 
-Gunakan Node.js 22 atau lebih baru, lalu jalankan dari direktori repository:
+Gunakan Node.js 22+ dan Python 3.10+ untuk helper skill, lalu jalankan dari direktori repository:
 
 ```sh
 npm ci
 npm run setup:skills
 ```
 
-`package-lock.json` mengunci versi dependensi agar instalasi konsisten. Repository ini menyiapkan dependensi; aplikasi web dan perintah untuk menjalankan situs belum dibuat.
+`package-lock.json` mengunci versi dependensi agar instalasi konsisten. Skill AI disimpan bersama repository; script setup menyiapkan helper Design DNA dan engine Impeccable sesuai platform.
+
+## Menjalankan aplikasi
+
+```sh
+npm run dev
+```
+
+Server memakai port 3000 secara default. Untuk port lain, jalankan `npm run dev -- --port 3001`.
+
+Pemeriksaan dan mode produksi:
+
+```sh
+npm run lint
+npm run typecheck
+npm run build
+npm start
+```
+
+Halaman awal memakai metadata `noindex` selama konten masih berupa placeholder. Ganti metadata dan konten saat company profile siap diterbitkan. Instalasi ini tidak mencakup deployment hosting.
+
+## Struktur
+
+- `src/app/`: halaman, layout, metadata, dan stylesheet Tailwind.
+- `src/components/motion-demo.tsx`: contoh client component GSAP dan ScrollTrigger dengan cleanup serta reduced motion.
+- `scripts/setup-impeccable.mjs`: menyiapkan engine skill dari paket npm yang dikunci versinya.
+- `.agents/skills/` dan `.claude/skills/`: skill AI untuk masing-masing provider.
 
 ## Library yang terpasang
 
 | Library | Kegunaan |
 | --- | --- |
+| [Next.js](https://nextjs.org/docs) + React | App Router, rendering server, dan build produksi. |
+| [Tailwind CSS](https://tailwindcss.com/docs) | Styling responsif dengan integrasi PostCSS. |
 | [Three.js](https://threejs.org/docs/) (`three`) | Scene 3D, material, lighting, dan partikel. |
 | [GSAP](https://gsap.com/docs/v3/) (`gsap`) | Tween, timeline, serta animasi elemen HTML dan SVG. |
 | [ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/) | Plugin animasi berbasis scroll; sudah termasuk paket `gsap`. |
@@ -38,7 +66,8 @@ Three.js membutuhkan konteks WebGL untuk rendering. ScrollTrigger dan Lottie dig
 ## Skill AI yang terpasang
 
 - **[Design DNA](https://github.com/zanwei/design-dna):** mengekstrak warna, tipografi, spacing, gaya, dan efek dari referensi menjadi profil JSON, lalu memakai profil itu untuk implementasi. Termasuk alat pengukuran warna deterministik dan verifikasi dengan `sharp`.
+- **[Impeccable v4.7.0](https://github.com/pbakaus/impeccable/tree/skill-v4.7.0):** panduan desain, audit, pemolesan layout dan tipografi, serta detector lokal. Jalankan `npm run design:detect` untuk memeriksa source aplikasi. Skill dipasang untuk Codex dan Claude Code tanpa hook otomatis.
 - **[Genjutsu v4.1.1](https://github.com/AThevon/genjutsu/tree/v4.1.1):** bundle lengkap dengan pipeline `cast`, `paint`, `bunshin`, dan 17 modul pendamping untuk motion, visual identity, Three.js, GSAP, serta audit desain.
 - **Motion Design:** GSAP, ScrollTrigger, Lottie, dan panduan motion Genjutsu tersedia. Workflow AI terpisah dari daftar awal belum diidentifikasi karena tautan sumbernya belum diberikan.
 
-Skill disimpan di `.agents/skills/` untuk project ini, dengan symlink relatif di `.claude/skills/` untuk Claude Code. Tidak perlu mengunduh ulang skill setelah clone. Detail sumber, kompatibilitas, penggunaan, dan pemeriksaan tersedia di [SKILLS.md](SKILLS.md).
+Skill disimpan pada scope project. Design DNA dan Genjutsu memakai symlink relatif untuk Claude Code; Impeccable memiliki salinan khusus masing-masing provider. Tidak perlu mengunduh ulang dokumen skill setelah clone. Detail sumber, kompatibilitas, penggunaan, dan pemeriksaan tersedia di [SKILLS.md](SKILLS.md).

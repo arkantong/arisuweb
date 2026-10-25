@@ -2,17 +2,38 @@
   "name": "arisuweb",
   "version": "0.1.0",
   "private": true,
-  "description": "Browser animation dependencies for Arisuweb",
+  "description": "Company profile starter with Next.js, Tailwind CSS, and GSAP",
   "type": "module",
   "scripts": {
-    "setup:skills": "npm ci --prefix .agents/skills/design-dna/scripts --no-fund --no-audit"
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "lint": "eslint src next.config.ts postcss.config.mjs eslint.config.mjs scripts",
+    "typecheck": "next typegen && tsc --noEmit",
+    "setup:skills": "npm ci --prefix .agents/skills/design-dna/scripts --no-fund --no-audit && node scripts/setup-impeccable.mjs",
+    "design:detect": "impeccable detect src/"
   },
   "engines": {
     "node": ">=22"
   },
   "dependencies": {
+    "@gsap/react": "2.1.2",
     "gsap": "3.15.0",
     "lottie-web": "5.13.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.3",
+    "impeccable": "4.7.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "6.0.3"
   }
 }

@@ -4,6 +4,9 @@
   "private": true,
   "description": "Browser animation dependencies for Arisuweb",
   "type": "module",
+  "scripts": {
+    "setup:skills": "npm ci --prefix .agents/skills/design-dna/scripts --no-fund --no-audit"
+  },
   "engines": {
     "node": ">=22"
   },

@@ -8,6 +8,7 @@ Gunakan Node.js 22 atau lebih baru, lalu jalankan dari direktori repository:
 
 ```sh
 npm ci
+npm run setup:skills
 ```
 
 `package-lock.json` mengunci versi dependensi agar instalasi konsisten. Repository ini menyiapkan dependensi; aplikasi web dan perintah untuk menjalankan situs belum dibuat.
@@ -34,10 +35,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 Three.js membutuhkan konteks WebGL untuk rendering. ScrollTrigger dan Lottie digunakan di browser; jika memakai SSR, inisialisasikan setelah komponen terpasang di client. Pemutaran Lottie membutuhkan file animasi JSON.
 
-## Workflow desain dari daftar awal
+## Skill AI yang terpasang
 
-- **Design DNA:** belum dipasang; tautan sumber diperlukan untuk mengidentifikasi skill atau alat yang dimaksud.
-- **Motion Design:** GSAP dan Lottie telah disiapkan untuk animasi SVG dan Lottie. Workflow AI khusus belum dipasang karena sumbernya belum diberikan.
-- **Genjutsu:** belum dipasang; tautan sumber diperlukan untuk mengidentifikasi skill atau alat yang dimaksud.
+- **[Design DNA](https://github.com/zanwei/design-dna):** mengekstrak warna, tipografi, spacing, gaya, dan efek dari referensi menjadi profil JSON, lalu memakai profil itu untuk implementasi. Termasuk alat pengukuran warna deterministik dan verifikasi dengan `sharp`.
+- **[Genjutsu v4.1.1](https://github.com/AThevon/genjutsu/tree/v4.1.1):** bundle lengkap dengan pipeline `cast`, `paint`, `bunshin`, dan 17 modul pendamping untuk motion, visual identity, Three.js, GSAP, serta audit desain.
+- **Motion Design:** GSAP, ScrollTrigger, Lottie, dan panduan motion Genjutsu tersedia. Workflow AI terpisah dari daftar awal belum diidentifikasi karena tautan sumbernya belum diberikan.
 
-Nama workflow desain tidak otomatis menunjukkan nama paket npm.
+Skill disimpan di `.agents/skills/` untuk project ini, dengan symlink relatif di `.claude/skills/` untuk Claude Code. Tidak perlu mengunduh ulang skill setelah clone. Detail sumber, kompatibilitas, penggunaan, dan pemeriksaan tersedia di [SKILLS.md](SKILLS.md).

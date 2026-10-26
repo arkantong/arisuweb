@@ -1,6 +1,8 @@
 # Arisuweb
 
-Fondasi website company profile dengan Next.js App Router, TypeScript, Tailwind CSS v4, dan GSAP. Halaman awal menyertakan contoh animasi yang menghormati preferensi reduced motion. Identitas dan konten perusahaan belum diisi.
+Website company profile ARISU Creative dengan Next.js App Router, TypeScript, Tailwind CSS v4, dan GSAP. Konten berasal dari deck ARISU: layanan Campaign, Brand, Content, Craft; proses kerja; studi kasus Gulo Bakes; dan kontak.
+
+Visual gelap dengan aksen cyan–ungu, karya abstrak kaca/krom, animasi scroll dan respons pointer. Navigasi mobile, dialog detail proyek, serta tautan email, WhatsApp, dan Instagram tersedia. Animasi mengikuti preferensi reduced motion. Tidak ada backend formulir atau pengiriman pesan otomatis.
 
 ## Instalasi
 
@@ -30,12 +32,17 @@ npm run build
 npm start
 ```
 
-Halaman awal memakai metadata `noindex` selama konten masih berupa placeholder. Ganti metadata dan konten saat company profile siap diterbitkan. Instalasi ini tidak mencakup deployment hosting.
+Judul dan metadata sudah memakai identitas ARISU. Website dibangun dan diuji secara lokal; deployment hosting dan domain belum dikonfigurasi. Teks mengikuti bahasa Inggris pada deck. Logo dan karya Gulo Bakes berasal dari PDF yang diberikan; resolusi gambar portofolio mengikuti sumber PDF. Ganti dengan master beresolusi tinggi ketika tersedia, tanpa mengubah desain asli.
 
 ## Struktur
 
 - `src/app/`: halaman, layout, metadata, dan stylesheet Tailwind.
-- `src/components/motion-demo.tsx`: contoh client component GSAP dan ScrollTrigger dengan cleanup serta reduced motion.
+- `src/components/site-motion.tsx`: animasi GSAP dan ScrollTrigger dengan cleanup serta reduced motion.
+- `src/components/site-header.tsx`: navigasi desktop/mobile.
+- `src/components/project-dialog.tsx`: detail studi kasus dengan native dialog, dukungan Escape, dan pemulihan fokus.
+- `public/images/`: logo asli, gambar portofolio dari deck, dan aset abstrak yang dibuat untuk website.
+- `src/app/fonts/`: Space Grotesk lokal dan lisensi SIL OFL; tidak bergantung pada Google Fonts saat runtime.
+- `docs/design/creative-direction.md`: arah visual, tokens, sumber aset, dan adaptasi responsif.
 - `scripts/setup-impeccable.mjs`: menyiapkan engine skill dari paket npm yang dikunci versinya.
 - `.agents/skills/` dan `.claude/skills/`: skill AI untuk masing-masing provider.
 

@@ -7,7 +7,7 @@ Use the existing checkout. Cloud tasks already run in an isolated environment; d
 - Use Node.js 22 or newer and Python 3.10 or newer for the installed skill helpers.
 - Run `npm ci`, then `npm run setup:skills` from this repository.
 - The app uses Next.js App Router, TypeScript, Tailwind CSS v4, and GSAP. Run `npm run dev` for development. Validate changes with `npm run lint`, `npm run typecheck`, and `npm run build`; run the production build with `npm start`.
-- The current page is a starter, not the completed company profile. Do not invent company facts, services, clients, contact details, or testimonials. Replace its temporary `noindex` metadata when real content is ready to publish.
+- The page is the ARISU Creative company profile, based on the supplied 20-page deck. Do not invent company facts, services, clients, contact details, or testimonials. Gulo Bakes is a single case study. Use ARISU consistently; residual “lunch” text in the deck is not website copy. Read `docs/design/creative-direction.md` before visual changes.
 - Keep browser-only animation code in client components and respect reduced-motion preferences. Keep page content server-rendered when it needs no client state. Tailwind scans `src/`, not vendored skill examples.
 
 ## Project skills

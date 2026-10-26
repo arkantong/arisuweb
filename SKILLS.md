@@ -70,4 +70,4 @@ npm run design:detect
 .claude/skills/impeccable/scripts/impeccable engine-probe
 ```
 
-Pemeriksaan helper memvalidasi alat skill, bukan kualitas seluruh hasil desain. Untuk aplikasi Next.js, jalankan lint, typecheck, production build, lalu uji halaman dan interaksi di browser pada desktop dan HP. Halaman awal saat ini hanya menunjukkan fondasi aplikasi dan animasi; company profile lengkap belum dibuat.
+Pemeriksaan helper memvalidasi alat skill, bukan kualitas seluruh hasil desain. Untuk aplikasi Next.js, jalankan lint, typecheck, production build, lalu uji halaman dan interaksi di browser pada desktop dan HP. Company profile ARISU kini mencakup layanan, portofolio Gulo Bakes, proses kerja, dan kontak. Saat menguji, periksa navigasi mobile, dialog proyek (termasuk Escape dan pemulihan fokus), tautan kontak, overflow, serta reduced motion.

@@ -42,3 +42,11 @@ The packaging image embedded in the PDF is only 416 × 281px. To avoid enlarging
 ## Asset provenance
 
 `arisu-logo.png`, `gulo-*`: directly extracted embedded images from user-supplied PDF. `idea-knot.webp`, `glass-ribbon.webp`: generated for this website, optimized from original production asset passes. Space Grotesk: Fontsource 5.3.0, SIL OFL license included next to the font. No external font/CDN requests required at runtime.
+
+## Light and dark themes
+
+The header offers a keyboard-accessible theme switch. On the first visit, follow `prefers-color-scheme`; an explicit choice is saved as `arisu-theme` in localStorage and synchronized across tabs. Apply the theme in a small fixed inline script before the page paints to avoid a flash of the wrong theme. Storage errors must not block theme switching. Without an explicit choice, continue following OS changes.
+
+Light uses pure white `#ffffff`, ink `#171822`, secondary `#5c6070`, teal `#006b83` and violet `#7042ba`. Use darker gradient text and timeline accents for contrast. The ARISU wordmark preserves the original PDF soft mask, with a black treatment on white. Client artwork retains its original colors. Project dialog chrome follows the selected theme while Gulo color swatches retain their brand colors.
+
+`idea-knot-light.webp` and `glass-ribbon-light.webp` are dedicated white-background artwork variants generated from the original dark artwork. They share its framing and aspect ratio so theme switching does not move page content. The small-screen header uses an icon switch; the contact link remains available in the mobile navigation and contact section.

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { Arrow } from "./arrow";
+import { ThemeToggle } from "./theme-toggle";
 const links = [
   ["Studio", "studio"],
   ["Services", "services"],
@@ -48,9 +49,12 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-        <a href="#contact" className="button button-outline header-cta">
-          Let’s talk <Arrow />
-        </a>
+        <div className="header-actions">
+          <ThemeToggle />
+          <a href="#contact" className="button button-outline header-cta">
+            Let’s talk <Arrow />
+          </a>
+        </div>
         <details className="mobile-menu" ref={menu}>
           <summary aria-label="Toggle navigation">
             <span />

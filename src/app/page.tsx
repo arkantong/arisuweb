@@ -58,10 +58,20 @@ export default function HomePage() {
                 <div className="hero-art-inner">
                   <Image
                     src="/images/idea-knot.webp"
+                    className="theme-art-dark"
                     alt=""
                     width={1254}
                     height={1254}
                     preload
+                    sizes="(max-width: 700px) 100vw, 65vw"
+                  />
+                  <Image
+                    src="/images/idea-knot-light.webp"
+                    className="theme-art-light"
+                    alt=""
+                    width={1254}
+                    height={1254}
+                    loading="eager"
                     sizes="(max-width: 700px) 100vw, 65vw"
                   />
                 </div>
@@ -312,6 +322,15 @@ export default function HomePage() {
                 <div className="contact-art" aria-hidden="true">
                   <Image
                     src="/images/glass-ribbon.webp"
+                    className="theme-art-dark"
+                    alt=""
+                    width={1536}
+                    height={1024}
+                    sizes="(max-width: 700px) 100vw, 60vw"
+                  />
+                  <Image
+                    src="/images/glass-ribbon-light.webp"
+                    className="theme-art-light"
                     alt=""
                     width={1536}
                     height={1024}

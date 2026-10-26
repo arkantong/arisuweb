@@ -4,6 +4,8 @@ Website company profile ARISU Creative dengan Next.js App Router, TypeScript, Ta
 
 Visual gelap dengan aksen cyan–ungu, karya abstrak kaca/krom, animasi scroll dan respons pointer. Navigasi mobile, dialog detail proyek, serta tautan email, WhatsApp, dan Instagram tersedia. Animasi mengikuti preferensi reduced motion. Tidak ada backend formulir atau pengiriman pesan otomatis.
 
+Tersedia tema **Light dan Dark** melalui tombol matahari/bulan di header. Kunjungan pertama mengikuti tema perangkat, lalu pilihan manual disimpan di browser dan disinkronkan antartab. Tema diterapkan sebelum tampilan pertama untuk menghindari kilatan warna. Kedua tema memiliki aset kaca/krom, kontras teks, navigasi, dan dialog proyek yang sesuai; warna asli portofolio tetap dipertahankan.
+
 ## Instalasi
 
 Gunakan Node.js 22+ dan Python 3.10+ untuk helper skill, lalu jalankan dari direktori repository:
